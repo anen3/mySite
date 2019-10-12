@@ -1,0 +1,73 @@
+/*Alex Nguyen
+alex_nguyen@student.uml.edu
+UMass Lowell COMP4610 GUI Programming I
+Purpose of this webpage: Practicing css/html and learning flexbox*/
+/*Followed flexbox implementation guide from Mozilla*/
+/*https://devdocs.io/css/css_flexible_box_layout/aligning_items_in_a_flex_container*/
+/*https://devdocs.io/css/css_flexible_box_layout/basic_concepts_of_flexbox*/
+
+
+/*top of page should have picture and title*/
+body {
+	background-image: url("grid-adam-miconi.jpg");
+	background-position: center center;
+	background-size: 20% 50%;
+}
+/*Followed flexbox implementation guide from Mozilla*/
+/*https://devdocs.io/css/css_flexible_box_layout/aligning_items_in_a_flex_container*/
+/*https://devdocs.io/css/css_flexible_box_layout/basic_concepts_of_flexbox*/
+.heading {
+	background-color: white;
+	margin:0 auto;
+	max-width: 80%;
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* justify items on the cross axis(y axis)*/
+	justify-content: center; /* justify items on the main axis(x axis)*/
+	height: 200px;
+	border: solid;
+}
+.heading> :first-child{
+	font-size: 30px;
+}
+/*Followed flexbox implementation guide from Mozilla*/
+/*https://devdocs.io/css/css_flexible_box_layout/aligning_items_in_a_flex_container*/
+/*https://devdocs.io/css/css_flexible_box_layout/basic_concepts_of_flexbox*/
+/*Assignment Index should be a formatted to resemble a grid */
+.test {
+	background-color: white;
+	margin:0 auto;
+	max-width: 80%;
+	border: solid;
+	border-top: none;
+	display: flex;
+	flex-wrap: wrap;
+	height: 200px;
+}
+/*change the size of each test element*/
+.test>* {
+	flex: 2 1 auto;
+	align-items: stretch;
+	border:solid;
+}
+
+/* expand and show information if hovered*/
+/* used the following link to hide info on when not hovered
+https://stackoverflow.com/questions/17393231/css-on-hover-show-and-hide-different-divs-at-the-same-time*/
+.hw:hover p{
+	display: inline;
+}
+.hw:hover{
+	flex-grow: 3;
+}
+
+a{
+	text-decoration: none;
+}
+.hw> p {
+	display: none;
+}
+
+.content {
+	margin-left: auto;
+}
